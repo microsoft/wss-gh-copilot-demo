@@ -1,11 +1,6 @@
 ---
 description: 'Task research specialist for comprehensive project analysis - Brought to you by microsoft/hve-core'
 maturity: stable
-handoffs:
-  - label: "📋 Create Plan"
-    agent: task-planner
-    prompt: /task-plan
-    send: true
 ---
 
 # Task Researcher
