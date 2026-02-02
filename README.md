@@ -7,10 +7,10 @@ This walks through a research -> plan -> implement workflow that shows how busin
 To complete this workflow, a few things are required:
 
 * Install [VSCode](https://code.visualstudio.com/download)
-  * Install GitHub Copilot Extension
-  * Install GitHub Copilot Chat Extension
-  * Install HVE Core Extention
-* Git installed and configured locally. Note: When attempting source control operations, VScode will prompt you to install git is not available. 
+  * Install [GitHub Copilot Extension](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+  * Install [GitHub Copilot Chat Extension](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.VSGitHubCopilot)
+  * Install [HVE Core Extention](https://github.com/microsoft/hve-core)
+* Git installed and configured locally. Note: When attempting source control operations, VScode will prompt you to install git if it is not available. 
 * Sign-up for an Enterprise Managed User (EMU) GitHub Account
   * Access to a GitHub Copilot subscription
   * Sign into your GitHub account in VSCode
@@ -18,7 +18,7 @@ To complete this workflow, a few things are required:
 
 # A Story in Three Parts
 
-This examples leverages a few of the agents that are available in the [HVE Core repository](https://github.com/microsoft/hve-core), including the `task-researcher`, `task-planner` and `task-implementer` agents. 
+This example leverages a few of the agents that are available in the [HVE Core repository](https://github.com/microsoft/hve-core), including the `task-researcher`, `task-planner` and `task-implementer` agents. 
 
 ## 1) You want market insights and research into the latest industry events
 
@@ -31,15 +31,26 @@ In the prompt dialog box, copy and paste the following:
 
 ...and hit the send button. Copilot should start researching this request. As it fetches external Urls, it will ask for permission to do so -- hit 'Allow' to continue. This will take a few minutes.
 
-### Plan
+This will create a timestamp-based markdown file in `.copilot-tracking/research`
 
->Based on the research on AWS re:invent and Microsoft Ingnite announcements, create a high level pitch that highlights the strenghts of three Microsoft products, that can be used by our sales and account teams.
+### Plan
+From the previous output, use this prompt to create a plan:
+
+> Based on the research on AWS re:invent and Microsoft Ingnite announcements, create a high level pitch that highlights the strenghts of three Microsoft products, that can be used by our sales and account teams.
+
+This will create markdown files in `.copilot-tracking/plan` and `.copilot-tracking/details`
 
 ### Implement
 Using the output from the `task-planner` agent, use the `task-implementor` agent to create the final pitch document.
 
-## 2) You want a pitch that is customized to a specific customer/partner
+The final document output will be in `doc/sales` folder. 
 
+## 2) You want a pitch that is customized to a specific customer/partner
+Re-run the `task-implementor` agent to create a targeted version of the high-level pitch, using this prompt:
+
+> Create a different version of the pitch, specific to customer <insert customer name>. References this press release to tailor the pitch to be relevant and highly relatable to that customer.
+
+Optionally: run the `task-reviewer` agent to review the pitch and provide suggestions and improvements.
 
 ## 3) Choose Your Own Adventure!
 * Try mixing and matching different prompts and models to get different results. 
