@@ -48,7 +48,7 @@ The final document output will be in `doc/sales` folder.
 ## 2) You want a pitch that is customized to a specific customer/partner
 Re-run the `task-implementor` agent to create a targeted version of the high-level pitch, using this prompt:
 
-> Create a different version of the pitch, specific to customer <insert customer name>. References this press release to tailor the pitch to be relevant and highly relatable to that customer.
+> Create a different version of the pitch, specific to customer <insert customer name>. Reference this press release Url to tailor the pitch to be relevant and highly relatable to that customer: <insert press release Url>
 
 Optionally: run the `task-reviewer` agent to review the pitch and provide suggestions and improvements.
 
