@@ -23,20 +23,20 @@ This example leverages a few of the agents that are available in the [HVE Core r
 ## 1) You want market insights and research into the latest industry events
 
 ### Research
-In your VSCode workspace for the repo, if it's not already open, open a window to the Copilot Chat window (View-->Chat). In the main chat interface, select the `task-researcher` agent and `Claude Opus 4.5`.
+In your VSCode workspace for the repo, if it's not already open, open a window to the Copilot Chat window (View --> Chat). In the main chat interface, select the `task-researcher` agent and `Claude Opus 4.5` model.
 
 In the prompt dialog box, copy and paste the following:
 
-> Compare and contrast the biggest announcements that came out of the 2025 Amazon's AWS re: invent and Microsoft Ignite events. Limit your research to the top 1 search link for both events, using bing.com. 
+> Compare and contrast the biggest announcements that came out of the 2025 Amazon's AWS re: invent and Microsoft Ignite events. Limit your research to the top 1 search link for both events, using Bing Search. 
 
 ...and hit the send button. Copilot should start researching this request. As it fetches external Urls, it will ask for permission to do so -- hit 'Allow' to continue. This will take a few minutes.
 
 This will create a timestamp-based markdown file in `.copilot-tracking/research`
 
 ### Plan
-From the previous output, use this prompt to create a plan:
+Reference the previous research output as context to the `task-planner` agent and use this prompt to create a plan:
 
-> Based on the research on AWS re:invent and Microsoft Ingnite announcements, create a high level pitch that highlights the strenghts of three Microsoft products, that can be used by our sales and account teams.
+> Based on the research on AWS re:invent and Microsoft Ingnite announcements, create a high level pitch that highlights the strenghts of three Microsoft products, that can be used interally by our Microsoft sales and account teams.
 
 This will create markdown files in `.copilot-tracking/plan` and `.copilot-tracking/details`
 
