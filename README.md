@@ -1,7 +1,16 @@
 # WSS GitHub Copilot Demo
+
 This repository demonstrates how Hyper Velocity Engineering (HVE) principles can be applied using agents to accelerate business contexts. By leveraging the same tools as engineering teams, business stakeholders can exercise more control over agent behavior and personas, as well as model flexibility.
 
-This walks through a research -> plan -> implement workflow that shows how business context can inform and flow into engineering outcomes. 
+This walks through a research -> plan -> implement workflow that shows how business context can inform and flow into engineering outcomes.
+
+## Table of Contents
+
+* [Some Prerequisites](#some-prerequisites)
+* [A Story in Three Parts](#a-story-in-three-parts)
+  * [1) You want market insights and research into the latest industry events](#1-you-want-market-insights-and-research-into-the-latest-industry-events)
+  * [2) You want a pitch that is customized to a specific customer/partner](#2-you-want-a-pitch-that-is-customized-to-a-specific-customerpartner)
+  * [3) Choose Your Own Adventure!](#3-choose-your-own-adventure) 
 
 # Some Prerequisites
 To complete this workflow, a few things are required:
