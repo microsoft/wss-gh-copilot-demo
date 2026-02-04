@@ -27,7 +27,7 @@ In your VSCode workspace for the repo, if it's not already open, open a window t
 
 In the prompt dialog box, copy and paste the following:
 
-> Compare and contrast the biggest announcements that came out of the 2025 Amazon's AWS re: invent and Microsoft Ignite events. Limit your research to the top 1 search link for both events, using Bing Search. 
+> Compare and contrast the biggest announcements that came out of the 2025 AWS re: invent and Microsoft Ignite events. Limit your research to the top 1 search link for both events, using Bing Search. 
 
 ...and hit the send button. Copilot should start researching this request. As it fetches external Urls, it will ask for permission to do so -- hit 'Allow' to continue. This will take a few minutes.
 
@@ -48,9 +48,9 @@ The final document output will be in `doc/sales` folder.
 ## 2) You want a pitch that is customized to a specific customer/partner
 Re-run the `task-implementor` agent to create a targeted version of the high-level pitch, using this prompt:
 
-> Create a different version of the pitch, specific to customer <insert customer name>. Reference this press release Url to tailor the pitch to be relevant and highly relatable to that customer: <insert press release Url>
+> Create a different version of the pitch, specific to customer `<insert customer name>`. Reference this press release Url to tailor the pitch to be relevant and highly relatable to that customer: `<insert press release Url>`
 
-Optionally: run the `task-reviewer` agent to review the pitch and provide suggestions and improvements.
+Optional: run the `task-reviewer` agent to review the pitch and provide suggestions and improvements.
 
 ## 3) Choose Your Own Adventure!
 * Try mixing and matching different prompts and models to get different results. 
